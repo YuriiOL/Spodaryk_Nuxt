@@ -1,0 +1,260 @@
+//@import "~assets/variables";
+
+.top-wrapper {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.55)), url("~/static/images/top-wrapper-logo.jpg") repeat fixed 50%;
+  background-size: cover;
+  background-position-y: center;
+  background-position-x: 100%;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media #{$mf_mobileXL} {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.55)), url("~/static/images/top-wrapper-logo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position-y: center;
+    background-position-x: 100%;
+  }
+  &__content {
+    color: white;
+    font-size: 25px;
+    text-align: center;
+  }
+}
+
+.main-title {
+  @include main-title;
+}
+
+.under-title {
+  @include small-title;
+}
+.under-title-bottom{
+  margin-top: 10px;
+  font-size: 15px;
+  font-family: $main-font;
+}
+
+.title-lines{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  &__left{
+    height: 1px;
+    width: 40%;
+    border: 2px solid $white;
+    position: relative;
+    &::before{
+      content: '';
+      display: block;
+      position: absolute;
+      top: -9px;
+      left: -5px;
+      border-style: solid;
+      border-width: 9px 0 9px 11px;
+      border-color: transparent transparent transparent #ffffff;
+    }
+  }
+  &__snowflake{
+    color: $main-color;
+  }
+  &__right{
+    width: 40%;
+    height: 1px;
+    border: 2px solid $white;
+    position: relative;
+    &::before{
+      content: '';
+      display: block;
+      position: absolute;
+      top: -9px;
+      right: -5px;
+      border-style: solid;
+      border-width: 9px 11px 9px 0;
+      border-color: transparent #ffffff transparent transparent;
+    }
+  }
+}
+.catalog-button{
+  margin-top: 15px;
+  border-radius: 5px;
+  background: $white;
+  height: 30px;
+  width: 100px;
+  font-size: 12px;
+  font-family: $main-font;
+  transition: all 0.6s ease;
+  color: black;
+  a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  &:hover{
+    background: $main-color;
+  }
+}
+@media #{$mf_mobileXL} {
+  .under-title-bottom{
+    font-size: 15px;
+  }
+}
+
+//catalog-line-container
+.about-line-container{
+  padding: 5% 10%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  &__left{
+    flex-basis: 50%;
+    padding: 0 20px;
+  }
+  &__right{
+    flex-basis: 50%;
+    padding: 0 20px;
+  }
+}
+.about-title{
+  @include main-text;
+}
+.about-small-title{
+  @include small-text;
+  margin-bottom: 20px;
+}
+.about-text{
+  line-height: 1.5;
+}
+@media #{$mf_tabletL} {
+  .about-line-container{
+    display: flex;
+    flex-direction: column;
+    &__left{
+      flex-basis: 100%;
+      padding: 20px 0;
+    }
+    &__right{
+      flex-basis: 100%;
+      padding: 20px 0;
+    }
+  }
+}
+
+//pause
+.pause-place {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 600px;
+}
+
+.pause-place-top{
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.55)), url("~/static/images/bg-black-plane.jpg") repeat fixed 50%;
+  background-size: cover;
+  @media #{$mf_mobileXL} {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.55)), url("~/static/images/bg-black-plane.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position-y: center;
+    background-position-x: center;
+  }
+}
+
+//catalog-line
+.catalog-line-container{
+  padding: 5% 10%;
+  background-color: white;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  &__left{
+    flex-basis: 50%;
+    padding: 0 20px;
+  }
+  &__right{
+    flex-basis: 50%;
+    padding: 0 20px;
+  }
+}
+@media #{$mf_tabletL} {
+  .catalog-line-container{
+    display: flex;
+    flex-direction: column;
+    &__left{
+      flex-basis: 100%;
+      padding: 20px 0;
+    }
+    &__right{
+      flex-basis: 100%;
+      padding: 20px 0;
+    }
+  }
+}
+
+.benefits-wrapper{
+  padding: 5% 10%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.titles{
+  &__undertitle{
+    font-size: 20px;
+    font-family: $main-font;
+    margin-bottom: 20px;
+  }
+}
+.benefits-box{
+  padding: 20px;
+  line-height: 22px;
+  letter-spacing: 0.8px;
+  width: 320px;
+  font-family: $main-font;
+  &__title{
+    font-size: 17px;
+    font-weight: bold;
+  }
+  &__text{
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+
+.benefits-info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.pause-place-bottom{
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.55)), url("~/static/images/planes.jpg") repeat fixed 85%;
+  @media #{$mf_mobileXL} {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.55)), url("~/static/images/planes.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position-y: center;
+    background-position-x: center;
+  }
+}
+
+
+

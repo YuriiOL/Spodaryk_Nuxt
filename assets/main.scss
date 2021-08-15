@@ -1,5 +1,7 @@
 @import "variables";
 @import "scss/fonts";
+@import "scss/home";
+@import "scss/footer";
 
 * {
   padding: 0;
@@ -14,4 +16,13 @@ body{
 img{
   max-width: 100%;
   max-height: 100%;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  @include hover-text
 }

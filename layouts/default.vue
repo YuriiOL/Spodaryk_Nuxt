@@ -1,18 +1,21 @@
 <template>
   <div>
-    <nav-bar/>
-    <Nuxt/>
+    <nav-bar />
+    <Nuxt />
+    <Footer />
   </div>
 </template>
 
 <script>
 import NavBar from '~/components/parts/nav-bar'
+import Footer from '~/components/parts/footer'
 
 export default {
-  components: { NavBar },
   comments: {
-    NavBar
+    NavBar,
+    Footer
   },
+  components: { NavBar, Footer },
   data: () => ({
     selectedItem: 1,
     items: [

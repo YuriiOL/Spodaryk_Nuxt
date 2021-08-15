@@ -1,5 +1,5 @@
 <template>
-  <div class="pause-place pause-place-top">
+  <div class="pause-place pause-place-top" :style="{backgroundImage: image}">
     <div class="smallTitleAnimation">
       <div class="main-title">
         The latest
@@ -13,7 +13,15 @@
 
 <script>
 export default {
+  props: {
+    image: {
+      type: String,
+      default: ''
+    }
+  },
+  computed: {
 
+  }
 }
 </script>
 

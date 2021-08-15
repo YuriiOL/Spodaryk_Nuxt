@@ -2,8 +2,7 @@
   <v-navigation-drawer
     v-model="drawer"
     class="side-bar"
-    absolute
-    temporary
+    fixed
     dark
   >
     <v-list

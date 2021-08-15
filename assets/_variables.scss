@@ -1,0 +1,92 @@
+// Ref: https://github.com/nuxt-community/vuetify-module#customvariables
+//
+// The variables you want to modify
+// $font-size-root: 20px;
+//fonts
+$main-font: SourceSansPro;
+$title-font: GreatVibes;
+
+// Colors
+$main-color: #C59D5F;
+$white: #ffffff;
+$footer-color: #515151;
+$side-bar: #B1B1B1B1;
+
+//screen width
+$mf_mobileM: "only screen and (max-width: 375px)";
+$mf_mobileL: "only screen and (max-width: 425px)";
+$mf_mobileXL: "only screen and (max-width: 560px)";
+$mf_tablet: "only screen and (max-width: 768px)";
+$mf_tabletL: "only screen and (max-width: 992px)";
+$mf_laptop: "only screen and (max-width: 1024px)";
+$mf_laptopM: "only screen and (max-width: 1176px)";
+$mf_laptopL: "only screen and (max-width: 1280px)";
+$mf_widthMax: "only screen and (max-width: 1600px)";
+
+@mixin clear-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin hover-text {
+  &:hover{
+    color: $main-color;
+  }
+}
+
+@mixin  main-title {
+  font-family: $title-font;
+  color: #C59D5F;
+  font-size: 100px;
+  font-weight: 400;
+  @media #{$mf_mobileXL} {
+    font-size: 70px;
+  }
+}
+
+@mixin small-title {
+  font-family: $main-font;
+  font-size: 28px;
+  font-weight: 400;
+  @media #{$mf_mobileXL} {
+    font-size: 23px;
+  }
+}
+
+@mixin  main-text {
+  font-family: $title-font;
+  color: #C59D5F;
+  font-size: 60px;
+  font-weight: 400;
+  @media #{$mf_mobileXL} {
+    font-size: 40px;
+  }
+}
+
+@mixin  small-text {
+  font-family: $main-font;
+  font-size: 28px;
+  font-weight: 400;
+  @media #{$mf_mobileXL} {
+    font-size: 23px;
+  }
+}
+
+@mixin regular-text{
+  text-align: center;
+  font-family: $main-font;
+}
+
+@mixin about-regular-text{
+  text-align: center;
+  font-family: $main-font;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 1px;
+}
+
+@mixin links{
+  color: #C59D5F;
+  cursor: pointer;
+}
